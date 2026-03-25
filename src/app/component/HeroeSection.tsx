@@ -6,7 +6,7 @@ function HeroeSection() {
     <div>
         <div className='Wrapper'>
            
-           <div className='flex'>
+           <div className='flex lg:flex-row flex-col'>
         
             <div className='relative  w-full overflow-hidden  '>
                 <Image src="/images/black-white-portrait.svg" alt='background-image'

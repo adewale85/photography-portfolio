@@ -5,13 +5,13 @@
   --foreground: #171717;
 }
 
+
+
 @theme {
-  --font-inter: Glinster, sans-serif;
-  --font-poppins: Roboto, sans-serif;
-  --color-primary: #DB4444; 
-  --color-secondary: #F5F5F5; 
-  /* --color-dark: #000000;  */
-  /* --color-light: #f1f5f9;  */
+  
+  --font-glinter: var(--font-glinter);
+  --font-open: var(--font-open-sans);
+  --font-roboto: var(--font-roboto);
 }
 
 .Wrapper {
