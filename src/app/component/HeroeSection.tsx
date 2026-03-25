@@ -9,7 +9,10 @@ function HeroeSection() {
            <div className='flex'>
         
             <div className='relative  w-full overflow-hidden  '>
-                <Image src="/images/black-white-portrait.svg" alt='background-image' width={2600} height={936}
+                <Image src="/images/black-white-portrait.svg" alt='background-image'
+                 priority
+                 width={2600}
+                 height={936}
                 className='object-cover z-10'/>
             </div>
             
@@ -22,7 +25,9 @@ function HeroeSection() {
                 </p>
 
                 <p className='flex gap-3 font-normal text-[17px] font-poppins text-[#D0B8AC]'>Read More
-                <Image src="/images/Right_Arrow.svg" alt='globe' width={12} height={12}/>
+                <Image src="/images/Right_Arrow.svg" alt='Arrow' width={20} height={12}
+                style = {{width: 'auto'}}
+                />
                 </p>
             </div>
             
