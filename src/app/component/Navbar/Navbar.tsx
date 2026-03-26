@@ -39,7 +39,7 @@ export default function Navbar() {
           </button>
 
           {isOpen && (
-            <div className='lg:hidden absolute top-full left-0 bg-[#000000] w-full text-black z-50 shadow-lg flex flex-col items-center justify-center'>
+            <div className='lg:hidden absolute top-full left-0 bg-[#000000] w-full  text-black z-50 shadow-lg flex flex-col items-center justify-center'>
             
         <ul className='flex flex-col items-center gap-8 text-black'>
           {Navlinks.map((link)=>(

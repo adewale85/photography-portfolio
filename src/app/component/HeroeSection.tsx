@@ -16,6 +16,22 @@ function HeroeSection() {
                 className=' z-10'/>
             </div>
 
+
+                <div className='mt-50'>
+                   <div className='space-y-12 flex flex-col items-center justify-center'>
+                     <div className='h-[157px] w-1 opacity-70 border bg-[#D0B8AC] '>
+                    </div>
+
+                    <div className='space-y-4 items-center'>
+                        <Image src="/images/instagram.svg" alt='facebook-logo' width={20} height={20}/>
+                        <Image src="/images/facebook.svg" alt='facebook-logo' width={20} height={20}/>
+                        <Image src="/images/twitter.svg" alt='facebook-logo' width={20} height={20}/>
+                    </div>
+
+                    <div className='h-[157px] w-1 border bg-[#D0B8AC] opacity-70'>
+                    </div>
+                   </div>
+                </div>
             {/* <div className='relative w-full overflow-hidden lg:hidden flex items-center justify-center'>
                 <Image src="/images/black-white-portrait.svg" alt='background-image'
                  priority
@@ -25,7 +41,7 @@ function HeroeSection() {
             </div> */}
             
             <div className='lg:w-139.5 w-full  absolute mt-50  lg:space-y-20 space-y-8'>
-            <h1 className='font-poppins font-normal lg:text-[150px] text-[100px] lg:leading-24.5 leading-18 text-[#D0B8AC]'>
+            <h1 className='font-poppins font-normal lg:text-[150px] text-[100px] lg:leading-22 leading-18 text-[#D0B8AC]'>
                 Monica Johnson 
             </h1>
                 <p className='lg:w-91.75 w-full font-normal text-[16px] text-[#FFFFFF] font-poppins'>
