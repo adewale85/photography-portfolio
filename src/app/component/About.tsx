@@ -49,7 +49,7 @@ function About() {
       </div>
 
         {/* Mobile */}
-         <div className="space-y-12">
+         <div className="space-y-12 lg:hidden w-full">
               <Image
                 src="/images/portrait2.svg"
                 alt="portrait2"
