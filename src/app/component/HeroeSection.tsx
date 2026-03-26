@@ -6,21 +6,29 @@ function HeroeSection() {
     <div>
         <div className='Wrapper'>
            
-           <div className='flex lg:flex-row flex-col'>
+           <div className='flex lg:flex-row flex-col lg:px-0 px-4'>
         
-            <div className='relative  w-full overflow-hidden  '>
+            <div className='relative w-full overflow-hidden '>
                 <Image src="/images/black-white-portrait.svg" alt='background-image'
                  priority
                  width={2600}
                  height={936}
-                className='object-cover z-10'/>
+                className=' z-10'/>
             </div>
+
+            {/* <div className='relative w-full overflow-hidden lg:hidden flex items-center justify-center'>
+                <Image src="/images/black-white-portrait.svg" alt='background-image'
+                 priority
+                 width={2600}
+                 height={2236}
+                className='object-cover z-10'/>
+            </div> */}
             
-            <div className='w-139.5 absolute mt-50 space-y-20'>
-            <h1 className='font-poppins font-normal text-[150px] leading-24.5 text-[#D0B8AC]'>
+            <div className='lg:w-139.5 w-full  absolute mt-50  lg:space-y-20 space-y-8'>
+            <h1 className='font-poppins font-normal lg:text-[150px] text-[100px] lg:leading-24.5 leading-18 text-[#D0B8AC]'>
                 Monica Johnson 
             </h1>
-                <p className='w-91.75 font-normal text-[16px]  text-[#FFFFFF] font-poppins'>
+                <p className='lg:w-91.75 w-full font-normal text-[16px] text-[#FFFFFF] font-poppins'>
                     Our photography services feature highly skilled professionals and the attraction of top talent for each shoot. We excel at solving creative and organizational challenges, regardless of the level of complexity involved.
                 </p>
 
