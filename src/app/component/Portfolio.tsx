@@ -8,7 +8,7 @@ function Porfolio() {
   <div className='flex lg:flex-row flex-col justify-between gap-22'>
      <div className='space-y-3'>
     <Image src="/images/porfolio_portrait.svg" alt='porfolio-image' width={553} height={690.73}/>
-    <div className='mt-12 lg:w-[553px] w-full h-[2px] text-[#D0B8AC] bg-[#D0B8AC] opacity-50'></div>
+    
    </div>
 
    <div className='space-y-5'>
@@ -21,6 +21,15 @@ function Porfolio() {
       </div>
     </div>
    </div>
+  </div>
+  <div className='flex justify-between py-12'>
+  <div className=' lg:w-[553px] w-full h-[2px] text-[#D0B8AC] bg-[#D0B8AC] opacity-50 '></div>
+  <p className='flex items-center gap-3 font-open font-normal text-[16px] text-[#D0B8AC]'>See All Portfolio
+
+  <span>
+    <Image src="/images/Right_Arrow.svg" alt="Arrow" width={24} height={12} className="w-auto" />
+  </span>
+  </p>
   </div>
     </div>
   )

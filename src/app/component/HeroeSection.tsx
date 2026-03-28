@@ -26,7 +26,6 @@ const HeroSection = () => {
           </div>
         </Link>
 
-        
 
       </div>
 
@@ -44,7 +43,7 @@ const HeroSection = () => {
   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
 
 
-<div className=" absolute bottom-10 lg:left-170 top-50 left-0 z-20 flex lg:flex-col flex-row items-center gap-6 justify-center">
+<div className=" absolute -bottom-10 lg:left-170 top-50 left-0 z-20 flex lg:flex-col flex-row items-center gap-6 justify-center">
           
 
           <div className="flex flex-row lg:flex-col gap-6 items-center ">
@@ -52,7 +51,7 @@ const HeroSection = () => {
             <a href="https://instagram.com" target="_blank">
               <Image src="/images/instagram.svg" alt="Instagram" width={20} height={20} />
             </a>
-            <a href="https://facebook.com" target="_blank">
+            <a href="https://facebook.com" target="Odusola Adewale">
               <Image src="/images/facebook.svg" alt="Facebook" width={20} height={20} />
             </a>
             <a href="https://twitter.com" target="_blank">

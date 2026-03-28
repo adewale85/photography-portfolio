@@ -2,6 +2,7 @@
 
 import About from './component/About'
 import HeroeSection from './component/HeroeSection'
+import LatestWork from './component/LatestWork'
 import Navbar from './component/Navbar/Navbar'
 import Porfolio from './component/Portfolio'
 
@@ -14,6 +15,7 @@ function Home() {
     <About/>
     <div>
     <Porfolio/>
+    <LatestWork/>
     </div>
     </div>
     </main>
