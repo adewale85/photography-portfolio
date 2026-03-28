@@ -3,7 +3,7 @@ import React from 'react'
 
 function Porfolio() {
   return (
-    <div className='Wrapper py-40 space-y-12 lg:px-0 px-4 items-center justify-center'>
+    <div className='Wrapper lg:py-40 py-0 space-y-12 lg:px-0 px-4 items-center justify-center'>
       <h3 className='text-white font-glinter font-medium text-7xl '>Portfolio</h3>
   <div className='flex lg:flex-row flex-col justify-between gap-22'>
      <div className='space-y-3'>
@@ -22,11 +22,11 @@ function Porfolio() {
     </div>
    </div>
   </div>
-  <div className='flex justify-between py-12'>
-  <div className=' lg:w-[553px] w-full h-[2px] text-[#D0B8AC] bg-[#D0B8AC] opacity-50 '></div>
-  <p className='flex items-center gap-3 font-open font-normal text-[16px] text-[#D0B8AC]'>See All Portfolio
+  <div className='flex lg:flex-row flex-col-reverse justify-between py-12 '>
+  <div className=' lg:w-[553px] w-full h-[2px] text-[#D0B8AC] bg-[#D0B8AC] opacity-50  '></div>
+  <p className='flex lg:items-center gap-3 font-open font-normal text-[16px] text-[#D0B8AC] items-end justify-end lg:py-0 py-3'>See All Portfolio
 
-  <span>
+  <span className=''>
     <Image src="/images/Right_Arrow.svg" alt="Arrow" width={24} height={12} className="w-auto" />
   </span>
   </p>
