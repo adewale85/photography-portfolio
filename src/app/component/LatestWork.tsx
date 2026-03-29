@@ -43,7 +43,7 @@ function LatestWork() {
       </div>
 
     </div>
-    <div className="flex lg:flex-row  gap-4">
+    <div className="flex lg:flex-row  gap-4 lg:py-12 py-0">
        <Image
             src="/images/RecentWork1.svg"
             alt="Arrow"
@@ -67,6 +67,24 @@ function LatestWork() {
           />
        <Image
             src="/images/RecentWork1.svg"
+            alt="Arrow"
+            width={24}
+            height={12}
+            className="w-auto "
+          />
+    </div>
+
+    <div className="flex gap-12 items-center justify-center ">
+      <Image
+            src="/images/right-arrow.svg"
+            alt="Arrow"
+            width={24}
+            height={12}
+            className="w-auto "
+          />
+
+          <Image
+            src="/images/right-arrow1.svg"
             alt="Arrow"
             width={24}
             height={12}

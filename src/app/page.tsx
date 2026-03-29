@@ -5,6 +5,7 @@ import HeroeSection from './component/HeroeSection'
 import LatestWork from './component/LatestWork'
 import Navbar from './component/Navbar/Navbar'
 import Porfolio from './component/Portfolio'
+import Prices from './component/Prices'
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
     <div>
     <Porfolio/>
     <LatestWork/>
+    <Prices/>
     </div>
     </div>
     </main>
