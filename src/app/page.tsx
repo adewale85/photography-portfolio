@@ -6,6 +6,7 @@ import LatestWork from './component/LatestWork'
 import Navbar from './component/Navbar/Navbar'
 import Porfolio from './component/Portfolio'
 import Prices from './component/Prices'
+import Review from './component/Review'
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
     <Porfolio/>
     <LatestWork/>
     <Prices/>
+    <Review/>
     </div>
     </div>
     </main>

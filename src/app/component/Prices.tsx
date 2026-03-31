@@ -3,7 +3,7 @@ import React from 'react'
 
 function Prices() {
   return (
-    <main className="Wrapper lg:px-0 px-4 py-32">
+    <main className="Wrapper lg:px-0 px-4 lg:py-32 py-6">
          
         <div className='flex lg:flex-row flex-col items-center justify-between'>
             
@@ -18,7 +18,7 @@ function Prices() {
          </div>
        
          <div>
-              <h1 className='font-glinster font-normal text-[75px] text-[#D0B8AC] pb-12'>My Prices
+              <h1 className='font-glinster font-normal lg:text-[75px] text-[50px] text-[#D0B8AC] pb-12'>My Prices
               </h1>
          <div className='flex gap-12'>
             <div className='space-y-12 '>
@@ -55,7 +55,7 @@ function Prices() {
          <div className='flex lg:flex-row flex-col items-center justify-center lg:h-[450px]  w-[2px] bg-white opacity-60'></div>
          </div>
         <div className='flex gap-3 items-end justify-end py-4'>
-            <p className='font-open font-normal text-[17px] text-white'>Order Shooting</p>
+            <p className='font-open font-normal text-[17px] text-white flex items-center justify-center'>Order Shooting</p>
              <Image
                 src="/images/right-arrow1.svg"
                 alt="Arrow"
