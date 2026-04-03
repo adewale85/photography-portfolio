@@ -1,6 +1,7 @@
 "use client"
 
 import About from './component/About'
+import Footer from './component/Footer/Footer'
 import HeroeSection from './component/HeroeSection'
 import LatestWork from './component/LatestWork'
 import Navbar from './component/Navbar/Navbar'
@@ -23,6 +24,7 @@ function Home() {
     <Prices/>
     <Review/>
     <SubmitForm/>
+    <Footer/>
   
     </div>
     </div>
