@@ -7,6 +7,8 @@ import Navbar from './component/Navbar/Navbar'
 import Porfolio from './component/Portfolio'
 import Prices from './component/Prices'
 import Review from './component/Review'
+import SubmitForm from './component/SubmitForm'
+
 
 function Home() {
   return (
@@ -20,6 +22,8 @@ function Home() {
     <LatestWork/>
     <Prices/>
     <Review/>
+    <SubmitForm/>
+  
     </div>
     </div>
     </main>

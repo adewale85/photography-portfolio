@@ -9,7 +9,7 @@ const HeroSection = () => {
 
       <div className="flex flex-col justify-center px-6 py-12 lg:px-0 lg:w-[40%] z-10 ">
         
-        <h1 className="font-poppins text-[50px] md:text-[90px] lg:text-[120px] text-[70px] leading-[0.85] text-[#D0B8AC] mb-6">
+        <h1 className="font-glinter text-[50px] md:text-[90px] lg:text-[120px] text-[70px] leading-[0.85] text-[#D0B8AC] mb-6">
           Monica <br className="hidden lg:block" /> Johnson
         </h1>
 
