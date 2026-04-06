@@ -3,7 +3,7 @@ import React from 'react'
 
 function Review() {
   return (
-    <main className='Wrapper lg:px-0 px-4 lg:py-22 py-2'>
+    <main className='Wrapper lg:px-0 px-4 lg:py-12 py-2'>
         <div className=''>
           <h2 className='font-glinter font-normal lg:text-[100px] text-[70px] text-[#D0B8AC]'>Reviews</h2>
           <div className='flex lg:flex-row flex-col gap-12 items-center justify-center'>

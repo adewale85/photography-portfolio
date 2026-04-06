@@ -1,3 +1,4 @@
+
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { IoMdClose, IoMdMenu } from 'react-icons/io'
@@ -8,14 +9,15 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState (false)
 
     const Navlinks = [
-        {name: "Portfolio", href:"/"},
-        {name: "Service & Price", href:"/Service & Price"},
-        {name: "Info", href:"/Info"},
-        {name: "Contact", href:"/Contact"}
+        {name: "Home", href: "/"},
+        {name: "Portfolio", href: "#portfolio"},
+        {name: "Service & Price", href: "#prices"},
+        {name: "About", href: "/about"},
+        {name: "Contact", href: "#contact"}
     ]
 
   return (
-    <div className='relative flex items-center w-full h-16 lg:px-0 px-4 Wrapper'>
+    <main className=' relative flex items-center w-full h-16 lg:px-0 px-4 Wrapper'>
         {/* <div className='text-white '>
             PHOTOGRAPHY
         </div> */}
@@ -54,6 +56,6 @@ export default function Navbar() {
           )}
        </div>
 
-    </div>
+    </main>
   )
 }
