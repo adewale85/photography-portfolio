@@ -1,13 +1,15 @@
 import Image from 'next/image'
-import React from 'react'
+
 
 function Porfolio() {
+
   return (
     <main id="portfolio" className='Wrapper scroll-mt-20 lg:py-40 py-0 space-y-12 lg:px-0 px-4 items-center justify-center my-30 lg:my-0'>
       <h3 className='text-white font-glinter font-medium text-7xl '>Portfolio</h3>
   <div className='flex lg:flex-row flex-col justify-between gap-22'>
      <div className='space-y-3'>
-    <Image src="/images/porfolio_portrait.svg" alt='porfolio-image' width={553} height={690.73}/>
+    <Image src="/images/porfolio_portrait.svg" alt='porfolio-image' width={553} height={690.73}
+    className='w-full h-auto relative object-cover transition-transform duration-500 group-hover:scale-110'/>
     
    </div>
 
@@ -17,7 +19,7 @@ function Porfolio() {
       <Image src="/images/porfolio-portrait2.svg" alt='porfolio-image' width={461} height={533}
       className='w-full'/>
       <div className='absolute z-40 -bottom-12 -left-12'>
-        <Image src="/images/porfolio-pportrait3.svg" alt='porfolio-image' width={276} height={294}/>
+        <Image src="/images/porfolio-portrait3.svg" alt='porfolio-image' width={276} height={294}/>
       </div>
     </div>
    </div>

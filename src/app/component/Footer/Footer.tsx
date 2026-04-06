@@ -4,11 +4,12 @@ import React from 'react'
 
 function Footer() {
 
-  const Navlinks = [
-        {name: "Portfolio", href:"/"},
-        {name: "Service & Price", href:"/Service & Price"},
-        {name: "Info", href:"/Info"},
-        {name: "Contact", href:"/Contact"}
+  const FooterLink = [
+       {name: "Home", href: "/"},
+        {name: "Portfolio", href: "#portfolio"},
+        {name: "Service & Price", href: "#prices"},
+        {name: "About", href: "#about"},
+        {name: "Contact", href: "#contact"}
     ]
 
     const SocialMedia = [
@@ -23,7 +24,7 @@ function Footer() {
     <div className='relative flex items-center justify-between w-full h-16 '>
         <ul className='flex items-center lg:gap-12 gap-8 text-white font'>
             
-          {Navlinks.map((link)=>(
+          {FooterLink.map((link)=>(
             <li key={link.name}>
             <Link href={link.href}>
             {link.name}

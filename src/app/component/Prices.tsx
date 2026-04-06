@@ -13,7 +13,7 @@ function Prices() {
                     alt="price-image"
                     width={24}
                     height={12}
-                    className="w-[540px] "
+                    className="w-[500px] hover:scale-110 h-auto object-cover cursor-zoom-out transition-transform duration-500"
                   />
          </div>
        

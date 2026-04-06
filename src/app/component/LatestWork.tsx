@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
-function LatestWork() {
 
 const images = [
   { src: "/images/RecentWork1.svg", alt: "Recent Work 1" },
@@ -10,7 +9,15 @@ const images = [
   { src: "/images/RecentWork2.svg", alt: "Recent Work 3" },
   { src: "/images/RecentWork1.svg", alt: "Recent Work 4" },
 ];
+function LatestWork() {
 
+const [position, setPosition] = React.useState(0);
+const handleNext = () => {
+  setPosition((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+};
+const handlePrev = () => {
+  setPosition((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+};
 
   return (
     <main className="Wrapper lg:px-0 px-4 my-20 lg:my-0 " >
@@ -95,21 +102,25 @@ const images = [
     </div>
 
     <div className="flex gap-12 items-center justify-center ">
-      <Image
+     <button onClick={handleNext}>
+       <Image
             src="/images/right-arrow.svg"
             alt="Arrow"
             width={24}
             height={12}
             className="w-auto "
           />
+     </button>
 
-          <Image
+      <button onClick={handlePrev}>
+        <Image
             src="/images/right-arrow1.svg"
             alt="Arrow"
             width={24}
             height={12}
             className="w-auto "
           />
+      </button>
     </div>
     </main>
   );
