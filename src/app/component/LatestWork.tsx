@@ -3,7 +3,7 @@ import React from "react";
 
 function LatestWork() {
   return (
-    <main className="Wrapper lg:px-0 px-4 " >
+    <main className="Wrapper lg:px-0 px-4 my-20 lg:my-0 " >
       <div className="flex lg:flex-row flex-col items-center justify-center lg:space-y-0 space-y-12 lg:my-0 my-12">
       <h1 className="font-glinter font-bold lg:text-[100px] text-[60px] text-[#D0B8AC]">
         My Latest Work’s

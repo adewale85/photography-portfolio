@@ -3,11 +3,11 @@ import React from 'react'
 
 function Prices() {
   return (
-    <main id="prices" className="Wrapper scroll-mb-150 lg:px-0 px-4 lg:py-32 py-6">
+    <main id="prices" className="Wrapper scroll-mb-150 lg:px-0 px-4 lg:py-32 py-12">
          
         <div className='flex lg:flex-row flex-col items-center justify-between'>
             
-         <div>
+         <div className='mb-15 lg:mb-0'>
             <Image
                     src="/images/Priceimage.svg"
                     alt="price-image"

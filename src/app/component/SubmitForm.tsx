@@ -3,11 +3,11 @@ import React from 'react'
 
 function SubmitForm() {
   return (
-    <main className='Wrapper py-22 flex lg:flex-row flex-col-reverse justify-between '>
+    <main id="contact" className='Wrapper py-22 flex lg:flex-row flex-col-reverse justify-between '>
         <div className='z-20
          text-white w-full'> {/* Added w-full here */}
             <h1 className='lg:w-[530px] w-full lg:text-[80px] text-[30px] font-glinter font-bold text-[#D0B8AC]'>Submit your application</h1>
-            <div className='lg:absolute my-5 lg:w-[765px] w-full bg-[#363636] space-y-12 flex items-center justify-center'> {/* Fixed typo 'pace' to 'space' */}
+            <div className='lg:absolute my-5 lg:w-[765px] w-full py-5 bg-[#363636] space-y-12 flex items-center justify-center'> {/* Fixed typo 'pace' to 'space' */}
                <div className='space-y-8 w-full p-4 flex-1'> {/* Added w-full and slight padding for mobile edges */}
                 <div className='flex lg:flex-row flex-col gap-16 py-4 w-full'> 
                  {/* Corrected width logic below */}

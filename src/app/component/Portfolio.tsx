@@ -3,7 +3,7 @@ import React from 'react'
 
 function Porfolio() {
   return (
-    <main id="portfolio" className='Wrapper scroll-mt-20 lg:py-40 py-0 space-y-12 lg:px-0 px-4 items-center justify-center'>
+    <main id="portfolio" className='Wrapper scroll-mt-20 lg:py-40 py-0 space-y-12 lg:px-0 px-4 items-center justify-center my-30 lg:my-0'>
       <h3 className='text-white font-glinter font-medium text-7xl '>Portfolio</h3>
   <div className='flex lg:flex-row flex-col justify-between gap-22'>
      <div className='space-y-3'>

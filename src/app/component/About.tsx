@@ -3,7 +3,7 @@ import React from "react";
 
 function About() {
   return (
-    <main id="About" className=" Wrapper lg:px-0 px-4 ">
+    <main id="about" className=" Wrapper lg:px-0 px-4 ">
       <div className=" relative lg:flex hidden items-end justify-end ">
         <div className="absolute">
           <div className="flex gap-16">
