@@ -1,7 +1,17 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
 function LatestWork() {
+
+const images = [
+  { src: "/images/RecentWork1.svg", alt: "Recent Work 1" },
+  { src: "/images/RecentWork2.svg", alt: "Recent Work 2" },
+  { src: "/images/RecentWork2.svg", alt: "Recent Work 3" },
+  { src: "/images/RecentWork1.svg", alt: "Recent Work 4" },
+];
+
+
   return (
     <main className="Wrapper lg:px-0 px-4 my-20 lg:my-0 " >
       <div className="flex lg:flex-row flex-col items-center justify-center lg:space-y-0 space-y-12 lg:my-0 my-12">
@@ -20,7 +30,6 @@ function LatestWork() {
       </p>
       
 
-      
        <div className="flex items-end justify-end lg:pt-12 pt-0 py-3 lg:py-0 ">
        <div className="flex items-center justify-center gap-3">
           <p className="font-open font-normal text-[16px] text-[#D0B8AC] ">See More Work’s</p>
@@ -43,35 +52,46 @@ function LatestWork() {
       </div>
 
     </div>
-    <div className="flex lg:flex-row  gap-4 lg:py-12 py-0">
-       <Image
-            src="/images/RecentWork1.svg"
-            alt="Arrow"
-            width={24}
-            height={12}
-            className="w-auto "
-          />
-       <Image
-            src="/images/RecentWork1.svg"
-            alt="Arrow"
-            width={24}
-            height={12}
-            className="w-auto "
-          />
-       <Image
-            src="/images/RecentWork1.svg"
-            alt="Arrow"
-            width={24}
-            height={12}
-            className="w-auto "
-          />
-       <Image
-            src="/images/RecentWork1.svg"
-            alt="Arrow"
-            width={24}
-            height={12}
-            className="w-auto "
-          />
+    <div className="flex lg:flex-row gap-4 lg:py-12 py-0">
+      <div className="py-10 overflow-hidden bg:black">
+        <motion.div 
+    className="flex gap-6 w-max" // w-max ensures the container doesn't shrink
+    animate={{ x: ["0%", "-50%"] }} // Slide exactly half the total width
+    transition={{
+        repeat: Infinity,
+        duration: 20, // Increase duration for a smoother, slower move
+        ease: "linear"
+    }}
+>
+    {/* Map the images the FIRST time */}
+    {images.map((image, index) => (
+        <div key={`first-${index}`} className="relative flex-shrink-0">
+            <Image
+                src={image.src}
+                alt={image.alt}
+                width={250}
+                height={250}
+                className="w-auto h-[350px] object-cover" // Fixed height keeps it tidy
+            />
+        </div>
+    ))}
+
+    {/* Map the images the SECOND time (The "Buffer") */}
+    {images.map((image, index) => (
+        <div key={`second-${index}`} className="relative flex-shrink-0">
+            <Image
+                src={image.src}
+                alt={image.alt}
+                width={250}
+                height={250}
+                className="w-auto h-[350px] object-cover"
+            />
+        </div>
+    ))}
+</motion.div>
+      
+      </div>
+
     </div>
 
     <div className="flex gap-12 items-center justify-center ">

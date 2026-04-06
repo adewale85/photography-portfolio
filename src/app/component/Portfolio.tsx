@@ -17,7 +17,7 @@ function Porfolio() {
       <Image src="/images/porfolio-portrait2.svg" alt='porfolio-image' width={461} height={533}
       className='w-full'/>
       <div className='absolute z-40 -bottom-12 -left-12'>
-        <Image src="/images/porfolio-portrait3.svg" alt='porfolio-image' width={276} height={294}/>
+        <Image src="/images/porfolio-pportrait3.svg" alt='porfolio-image' width={276} height={294}/>
       </div>
     </div>
    </div>

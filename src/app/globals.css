@@ -5,7 +5,25 @@
   --foreground: #171717;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 5)); } /* Width of image * number of images */
+}
+
+.animate-marquee {
+  display: flex;
+  width: calc(250px * 10); /* Double the images for a seamless loop */
+  animation: scroll 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused; /* Stops sliding when user hovers */
+}
 
 @theme {
   

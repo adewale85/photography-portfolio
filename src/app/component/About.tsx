@@ -3,10 +3,10 @@ import React from "react";
 
 function About() {
   return (
-    <main id="about" className=" Wrapper lg:px-0 px-4 ">
-      <div className=" relative lg:flex hidden items-end justify-end ">
+    <main id="about" className=" Wrapper lg:px-0 px-4 my-15 lg:my-0 ">
+      <div className=" relative lg:flex hidden items-center justify-end ">
         <div className="absolute">
-          <div className="flex gap-16">
+          <div className="flex items-center gap-30">
             <div>
               <Image
                 src="/images/portrait2.svg"

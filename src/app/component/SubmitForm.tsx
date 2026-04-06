@@ -3,7 +3,7 @@ import React from 'react'
 
 function SubmitForm() {
   return (
-    <main id="contact" className='Wrapper py-22 flex lg:flex-row flex-col-reverse justify-between '>
+    <main id="contact" className='Wrapper py-32 flex lg:flex-row flex-col-reverse justify-between '>
         <div className='z-20
          text-white w-full'> {/* Added w-full here */}
             <h1 className='lg:w-[530px] w-full lg:text-[80px] text-[30px] font-glinter font-bold text-[#D0B8AC]'>Submit your application</h1>
