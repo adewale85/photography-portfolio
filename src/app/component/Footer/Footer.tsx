@@ -22,7 +22,7 @@ function Footer() {
   return (
     <main className='lg:px-0 px-4 Wrapper lg:py-12 lg:mt-12 mt-0 py-0'>
     <div className='relative flex items-center justify-between w-full h-16 '>
-        <ul className='flex items-center lg:gap-12 gap-8 text-white font'>
+        <ul className='flex items-center lg:gap-12 gap-5 text-white font-medium font-open lg:text-[20px] text-[14px]'>
             
           {FooterLink.map((link)=>(
             <li key={link.name}>
@@ -55,13 +55,15 @@ function Footer() {
     <div className='border-b-2 border-[#D0B8AC] py-8 flex items-center justify-center'>
          <div>
            
-         <div className="flex lg:hidden gap-8 justify-center mb-8">
+         <div className="flex lg:hidden gap-20 items-center justify-between mb-8">
              <h3 className='text-white flex lg:hidden text-center'> PHOTOGRAPHY</h3>
-                       {SocialMedia.map((social)=>(
+                      <div className='flex gap-5'>
+                         {SocialMedia.map((social)=>(
                         <a key={social.name} href={social.href} target="_blank">
                           <Image src={social.icon} alt={social.name} width={20} height={20} />
                         </a>
                       ))}
+                      </div>
 
             </div>
         <h4 className='text-[#D0B8AC] text-center font-glinter font-normal text-3xl'>Monica Johnson</h4>

@@ -18,10 +18,7 @@ export default function Navbar() {
 
   return (
     <main className=' relative flex items-center w-full h-16 lg:px-0 px-4 Wrapper'>
-        {/* <div className='text-white '>
-            PHOTOGRAPHY
-        </div> */}
-    
+       
         <ul className=' lg:flex hidden gap-22 text-white font'>
             <h1 className='text-white'> PHOTOGRAPHY</h1>
           {Navlinks.map((link)=>(
