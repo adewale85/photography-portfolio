@@ -1,38 +1,40 @@
+import { supabase } from "@/utils/superbase";
 import Image from "next/image";
-import React from "react";
 
-function About() {
+
+export default async function About() {
+const {data: profile, error} = await supabase 
+.from('profile')
+.select('*')
+
+if (error) return <div className="p-10 text-red">Error: {error.message}</div>
+
   return (
     <main id="about" className=" Wrapper lg:px-0 px-4 my-15 lg:my-0 ">
       <div className=" relative lg:flex hidden items-center justify-end ">
         <div className="absolute">
           <div className="flex items-center gap-30">
             <div>
-              <Image
-                src="/images/portrait2.svg"
-                alt="portrait2"
-                width={383}
-                height={376}
+              <image
+                src={profile[0].image_url}
+                alt={profile[0].title}
+                className="w-[400px] h-[450px] object-cover relative"  
               />
             </div>
             <div className="">
               <p className="w-[658px] text-white font-normal font-open text-[15px]">
-                As a professional photographer, I aim to capture the essence and
-                beauty of the world around me through the lens of my camera.
-                With a keen eye for detail, I am able to create stunning images
-                that showcase the unique stories and personalities of my
-                clients.
+               {profile[0].bio_text}
               </p>
               <div className="ml-20 mt-8 w-[2px] h-[150px]  bg-[#D0B8AC] opacity-50" />
             </div>
           </div>
 
-          <div>
-            <h1 className="font-glinter font-normal text-[130px] text-[#D0B8AC]">
+          <div className="text-left">
+            <h1 className="font-glinter font-normal  text-[130px] text-[#D0B8AC]">
               Photographer
             </h1>
-            <h1 className="pl-22 font-glinter font-normal text-[130px] text-[#D0B8AC]">
-              Monica Johnson
+            <h1 className="font-glinter font-normal leading-20 text-[150px] text-[#D0B8AC]">
+             {profile[0].headline}
             </h1>
           </div>
         </div>
@@ -86,4 +88,3 @@ function About() {
   );
 }
 
-export default About;

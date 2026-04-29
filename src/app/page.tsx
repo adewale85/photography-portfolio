@@ -1,5 +1,6 @@
 "use client"
 
+
 import About from './component/About'
 import Footer from './component/Footer/Footer'
 import HeroeSection from './component/HeroeSection'
@@ -9,6 +10,7 @@ import Porfolio from './component/Portfolio'
 import Prices from './component/Prices'
 import Review from './component/Review'
 import SubmitForm from './component/SubmitForm'
+import Mynewphoto from './component/Mynewphoto'
 
 
 function Home() {
@@ -16,6 +18,7 @@ function Home() {
     <main className='flex min-h-screen flex-col bg-[#000000] bg-cover bg-center bg-fixed bg-no-repeat w-full '>
     <div className='mt-12'>
      <Navbar/>
+      {/* <Mynewphoto/> */}
     <div className=''><HeroeSection/></div>
     <About/>
     <div>
@@ -24,6 +27,7 @@ function Home() {
     <Prices/>
     <Review/>
     <SubmitForm/>
+   
     <Footer/>
   
     </div>

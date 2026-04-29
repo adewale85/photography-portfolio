@@ -1,5 +1,6 @@
+import { useGet } from '@/hooks/useGet'
 import Image from 'next/image'
-import React from 'react'
+
 
 const reviewData = [
   {
@@ -23,6 +24,17 @@ const reviewData = [
 ]
 
 function Review() {
+
+// const {Products, error, status} = useGet();
+
+// if (status === "pending") {
+//   return <p className="text-center py-10">Loading products...</p>;
+
+//   if (status === "error") {
+//     return <p className='text-center text-red-600 '>Error loading products</p>
+//   }
+// }
+
   return (
     <main className='Wrapper lg:px-0 px-4 lg:py-12 py-2'>
       <div>
@@ -56,6 +68,20 @@ function Review() {
             </div>
           ))}
         </div>
+
+
+        {/* <div className='flex'>
+          {Products.slice(5,8).map((product)=>(
+            <div key={product.id} className='flex gap-22 bg-green-300 p-12'>
+              <Image 
+              src={product.thumbnail}
+              alt={""}
+              width={100}
+              height={100}
+              />  
+            </div>
+          ))}
+        </div> */}
       </div>
 
       {/* Navigation Arrows */}

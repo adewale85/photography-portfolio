@@ -9,6 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.104.1",
+    "@tanstack/react-query": "^5.99.0",
+    "@tanstack/react-query-devtools": "^5.99.0",
+    "axios": "^1.15.0",
     "framer-motion": "^12.38.0",
     "icon": "^0.0.3",
     "next": "16.2.1",

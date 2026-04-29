@@ -22,7 +22,7 @@ function Footer() {
   return (
     <main className='lg:px-0 px-4 Wrapper lg:py-12 lg:mt-12 mt-0 py-0'>
     <div className='relative flex items-center justify-between w-full h-16 '>
-        <ul className='flex items-center lg:gap-12 gap-5 text-white font-medium font-open lg:text-[20px] text-[14px]'>
+        <ul className='flex text-center lg:gap-12 gap-6 text-white font-medium font-open lg:text-[20px] text-[12px]'>
             
           {FooterLink.map((link)=>(
             <li key={link.name}>
