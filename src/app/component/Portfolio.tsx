@@ -27,7 +27,7 @@ async function Porfolio() {
             <div key={project.id} className="group relative overflow-hidden bg-zinc-900 rounded-sm">
            
              <div className=''>
-                <image 
+                <Image 
                 src={project.image_url} 
                 alt={project.title} 
                 className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out"

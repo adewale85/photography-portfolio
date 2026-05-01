@@ -15,10 +15,13 @@ if (error) return <div className="p-10 text-red">Error: {error.message}</div>
         <div className="absolute">
           <div className="flex items-center gap-30">
             <div>
-              <image
+              <Image
                 src={profile[0].image_url}
                 alt={profile[0].title}
-                className="w-[400px] h-[450px] object-cover relative"  
+                 width={400}
+                 height={450}
+                 unoptimized
+                className="w-[400px] h-[450px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out"  
               />
             </div>
             <div className="">
@@ -41,8 +44,8 @@ if (error) return <div className="p-10 text-red">Error: {error.message}</div>
 
         <div className="relatve mt-60 "> 
           <Image
-            src="/images/portrait3.svg"
-            alt="portrait2"
+            alt={profile[0].title}
+            src={profile[0].image_url}
             width={383}
             height={676}
           />
