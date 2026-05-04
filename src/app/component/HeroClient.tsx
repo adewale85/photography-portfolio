@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function HeroClient({ heroData }: { heroData: any[] }) {
   return (
-   <section className="Wrapper relative min-h-screen w-full bg-black flex flex-col-reverse lg:flex-row gap-22 mb-22 overflow-hidden">
+   <section className="Wrapper relative min-h-screen w-full bg-black flex flex-col-reverse lg:flex-row lg:gap-22 gap-0 lg:mb-22 mb-0 overflow-hidden">
       
       {/* Content Area */}
       <div className="flex flex-col justify-center px-6 py-12 lg:px-0 lg:w-[50%] z-10 ">
@@ -27,7 +27,7 @@ function HeroClient({ heroData }: { heroData: any[] }) {
       </div>
 
       {/* Image Gallery Area */}
-      <div className="relative w-full h-[70vh] lg:h-[90vh] py-22 lg:w-[50%]">
+      <div className="relative w-full h-[90vh] lg:h-[90vh] py-22 lg:w-[50%]">
         {heroData?.map((content) => (
           <div key={content.id} className="relative w-full h-full">
              <Image
@@ -43,7 +43,7 @@ function HeroClient({ heroData }: { heroData: any[] }) {
         <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/60" />
 
         {/* Social Links Sidebar */}
-        <div className="absolute bottom-10 lg:left-170 top-50 left-0 z-20 flex lg:flex-col flex-row items-center gap-6 justify-center">
+        <div className="absolute bottom-10 lg:left-170 lg:top-50 top-120 left-10 z-20 flex lg:flex-col flex-row items-center gap-6 justify-center">
           <div className="flex flex-row lg:flex-col gap-6 items-center">
             <div className="lg:w-[2px] w-20 lg:h-60 h-[2px] bg-[#D0B8AC] opacity-50" />
             <a href="https://instagram.com" target="_blank" rel="noreferrer">

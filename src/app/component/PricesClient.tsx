@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function PricesClient({ pricingData }: { pricingData: any[] }) {
   return (
-    <main id="prices" className="Wrapper scroll-mb-150 lg:px-0 px-4 lg:py-32 py-12 bg-black">
+    <main id="prices" className="Wrapper scroll-mb-150 lg:px-0 px-10 lg:py-32 py-12 bg-black">
       <div className='flex lg:flex-row flex-col items-center gap-8 lg:gap-12'>
         
         {/* Left Image Section */}
@@ -19,7 +19,7 @@ export default function PricesClient({ pricingData }: { pricingData: any[] }) {
         </div>
 
         {/* Right Pricing Section */}
-        <div className="lg:w-[80%]">
+        <div className="lg:w-[80%] w-full  ">
           <h1 className='font-glinster font-normal lg:text-[75px] text-[50px] text-[#D0B8AC] pb-12'>
             My Prices
           </h1>
@@ -36,7 +36,7 @@ export default function PricesClient({ pricingData }: { pricingData: any[] }) {
                       {item.price}
                     </span>
                   </div>
-                  <p className='font-open font-normal text-17px text-white w-[400px]'>
+                  <p className='font-open font-normal text-17px text-white lg:w-[400px] w-full'>
                     {item.description}
                   </p>
                 </div>

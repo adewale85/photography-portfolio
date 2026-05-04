@@ -71,9 +71,9 @@ if (error) return <div className="p-10 text-red">Error: {error.message}</div>
               <div className="mt-8 h-[2px] w-full  bg-[#D0B8AC] opacity-50" />
                 
             <div>
-                <h1 className="font-glinter font-bold text-[40px] text-[#D0B8AC]">
-              Photographer 
-              <p className="pl-6">Monica Johnson</p>
+                <h1 className="font-glinter font-bold lg:text-[40px] text-[50px] text-[#D0B8AC]">
+            Sholly Star
+              <p className="pl-6">Photographer </p>
             </h1>
             </div>
 

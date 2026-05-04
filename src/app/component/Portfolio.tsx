@@ -11,9 +11,9 @@ async function Porfolio() {
   
 
   return (
-    <main id="portfolio" className='Wrapper scroll-mt-20 lg:py-40 py-0 space-y-12 lg:px-0 px-4 items-center justify-center my-30 lg:my-0'>
+    <main id="portfolio" className='Wrapper lg:scroll-mt-20 scroll-mt-0 lg:py-40 py-0 space-y-12 lg:px-0 px-4 items-center justify-center '>
       <h3 className='text-white font-glinter font-medium text-7xl '>Portfolio</h3>
-  <div className='flex lg:flex-row flex-col justify-between gap-22'>
+  <div className='flex lg:flex-row flex-col justify-between lg:gap-22 gap-2'>
     
 
 
@@ -22,7 +22,7 @@ async function Porfolio() {
         {/* <h1 className="text-5xl font-bold mb-2 tracking-tighter">GALLERY</h1>
         <p className="text-zinc-500 mb-12 uppercase tracking-widest text-sm">Photography Portfolio</p> */}
         
-        <div className="lg:w-[602px] h-full w-full h-[2px] text-[#D0B8AC] bg-[#D0B8AC] opacity-50  ">
+        <div className="lg:w-[602px] w-full h-[2px] text-[#D0B8AC] bg-[#D0B8AC] opacity-50  ">
           {projects?.map((project) => (
             <div key={project.id} className="group relative overflow-hidden bg-zinc-900 rounded-sm">
            

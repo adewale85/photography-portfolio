@@ -16,7 +16,7 @@ function Home() {
   return (
     <div>
        <main className='flex min-h-screen flex-col bg-[#000000] bg-cover bg-center bg-fixed bg-no-repeat w-full '>
-      <div className='mt-12'>
+      <div className='lg:mt-12 mt-2'>
         <Navbar />
         <div>
           {/* This now works because the parent is a Server Component */}

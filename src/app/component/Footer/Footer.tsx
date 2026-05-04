@@ -22,7 +22,7 @@ function Footer() {
   return (
     <main className='lg:px-0 px-4 Wrapper lg:py-12 lg:mt-12 mt-0 py-0'>
     <div className='relative flex items-center justify-between w-full h-16 '>
-        <ul className='flex text-center lg:gap-12 gap-6 text-white font-medium font-open lg:text-[20px] text-[12px]'>
+        <ul className='grid lg:grid-cols-1 grid-cols-3 text-center lg:gap-12 gap-3 text-white font-medium font-open lg:text-[20px] text-[16px]'>
             
           {FooterLink.map((link)=>(
             <li key={link.name}>
@@ -40,14 +40,14 @@ function Footer() {
                         <a href="https://twitter.com" target="_blank">
                           <Image src="/images/twitter.svg" alt="Twitter" width={20} height={20} />
                         </a>
-                        <a href="https://facebook.com" target="Odusola Adewale">
+                        <a href="https://facebook.com/OdusolaAdewaleIseoluwa" target="">
                           <Image src="/images/facebook.svg" alt="Facebook" width={20} height={20} />
                         </a>
-                        <a href="https://instagram.com" target="_blank">
+                        <a href="https://instagram.com/OdusolaAdewaleIseoluwa" target="_blank">
                           <Image src="/images/instagram.svg" alt="Instagram" width={20} height={20} />
                         </a>
-                        <a href="https://Email.com" target="_blank">
-                          <Image src="/images/email.svg" alt="Instagram" width={20} height={20} />
+                        <a href="mailto:iseoluwaodu85@gmail.com" target="iseoluwaodu85@gmail.com">
+                          <Image src="/images/email.svg" alt="Email" width={20} height={20} />
                         </a>
             </div>
         </div>
@@ -66,10 +66,10 @@ function Footer() {
                       </div>
 
             </div>
-        <h4 className='text-[#D0B8AC] text-center font-glinter font-normal text-3xl'>Monica Johnson</h4>
+        <h4 className='text-[#D0B8AC] text-center font-glinter font-normal text-3xl'>Sholly Star </h4>
          </div>
     </div>
-    <p className='font-roboto font-normal text-[15px] text-white text-center py-12'>2023 ©Monica Johnson. All Rights Reserved.</p>
+    <p className='font-roboto font-normal text-[15px] text-white text-center py-12'>2023 ©Sholly Star. All Rights Reserved.</p>
     </main>
   )
 }

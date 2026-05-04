@@ -38,7 +38,7 @@ export default function SubmitForm() {
   };
 
   return (
-    <section id="contact" className="Wrapper py-24 bg-black">
+    <section id="contact" className="Wrapper lg:px-0 px-4 py-24 bg-black">
       <div className="flex flex-col lg:flex-row gap-20">
         
         {/* Left Side: Contact Information */}
@@ -60,7 +60,7 @@ export default function SubmitForm() {
         </div>
 
         {/* Right Side: The Form */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 ">
           <form onSubmit={handleSubmit} className="space-y-10">
             <div className="relative border-b border-white/20 focus-within:border-[#D0B8AC] transition-colors">
               <input 
