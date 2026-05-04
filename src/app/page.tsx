@@ -6,10 +6,11 @@ import HeroSection from './component/HeroSection'
 import About from './component/About'
 import Porfolio from './component/Portfolio'
 import LatestWork from './component/LatestWork'
-import Prices from './component/Prices'
 import Review from './component/Review'
 import SubmitForm from './component/SubmitForm'
 import Footer from './component/Footer/Footer'
+import Prices from './component/Prices'
+import Contact from './component/Contact'
 
 function Home() {
   return (
@@ -27,7 +28,8 @@ function Home() {
           <LatestWork />
           <Prices />
           <Review />
-          <SubmitForm />
+          {/* <SubmitForm /> */}
+          <Contact/>
           <Footer />
         </div>
       </div>
