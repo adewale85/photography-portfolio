@@ -1,4 +1,4 @@
-import { useGet } from '@/hooks/useGet'
+
 import Image from 'next/image'
 
 

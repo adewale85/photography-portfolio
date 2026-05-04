@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+
 
 export default function LatestWorkClient({ latestwork }: { latestwork: any[] }) {
   // Duplicate array for seamless infinite loop

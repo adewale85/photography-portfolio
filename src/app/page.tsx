@@ -1,36 +1,26 @@
 
 
-
-import Navbar from './component/Navbar/Navbar'
-import HeroSection from './component/HeroSection'
-import About from './component/About'
-import Porfolio from './component/Portfolio'
-import LatestWork from './component/LatestWork'
-import Review from './component/Review'
-import SubmitForm from './component/SubmitForm'
-import Footer from './component/Footer/Footer'
-import Prices from './component/Prices'
-import Contact from './component/Contact'
-
 function Home() {
   return (
     <div>
        <main className='flex min-h-screen flex-col bg-[#000000] bg-cover bg-center bg-fixed bg-no-repeat w-full '>
       <div className='mt-12'>
-        <Navbar />
+        {/* <Navbar /> */}
         <div>
           {/* This now works because the parent is a Server Component */}
-          <HeroSection/>
+          {/* <HeroSection/> */}
         </div>
-        <About />
+        {/* <About /> */}
         <div>
-          <Porfolio />
+          {/* <Porfolio />
           <LatestWork />
           <Prices />
           <Review />
-          {/* <SubmitForm /> */}
-          <Contact/>
-          <Footer />
+          */}
+          {/* <Contact/>
+          <Footer /> */}
+
+          <h1>It works!</h1>;
         </div>
       </div>
     </main>
