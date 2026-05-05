@@ -18,8 +18,10 @@ export default function LatestWorkClient({ latestwork }: { latestwork: any[] }) 
         style={{
           width: 50,
           height: 50,
+          
           backgroundColor: "red",
           margin: "20px",
+          
         }}
       />
 

@@ -33,6 +33,7 @@ function HeroClient({ heroData }: { heroData: any[] }) {
              <Image
               src={content.image_url}
               alt={content.title || "Hero Image"}
+              unoptimized
               fill
               className="object-cover"
               priority 

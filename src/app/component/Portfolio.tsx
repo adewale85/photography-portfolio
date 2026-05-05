@@ -30,6 +30,7 @@ async function Porfolio() {
                 <Image 
                 src={project.image_url} 
                 alt={project.title} 
+                unoptimized
                 className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out"
               width={553} height={190.73}/>
             </div>

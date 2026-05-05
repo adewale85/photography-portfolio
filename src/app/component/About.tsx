@@ -48,6 +48,7 @@ if (error) return <div className="p-10 text-red">Error: {error.message}</div>
             src={profile[0].image_url}
             width={383}
             height={676}
+            unoptimized
           />
         </div>
 
@@ -60,6 +61,7 @@ if (error) return <div className="p-10 text-red">Error: {error.message}</div>
                 alt="portrait2"
                 width={383}
                 height={376}
+                unoptimized
               />
               <p className="w-full text-white font-normal font-open text-[16px] leading-7">
                 As a professional photographer, I aim to capture the essence and
