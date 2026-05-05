@@ -17,7 +17,8 @@ export default function SubmitForm() {
     e.preventDefault();
     setLoading(true);
 
-    const { error } = await supabase
+    // 1. Save to Supabase (Database)
+    const { error: superbaseError } = await supabase
       .from("Contact")
       .insert([
         { 
@@ -27,13 +28,40 @@ export default function SubmitForm() {
         }
       ]);
 
-    setLoading(false);
-    if (!error) {
+    // Only stop if there IS an error
+    if (superbaseError) {
+      setLoading(false);
+      alert("Error saving to database: " + superbaseError.message);
+      return;
+    }
+
+    // 2. Send to Gmail via our API route
+    try {
+      const emailResponse = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        })
+      });
+
+      if (emailResponse.ok) {
+        setSuccess(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setSuccess(false), 5000);
+      } else {
+        console.error("Email failed, but data saved in Supabase.");
+        setSuccess(true); // Still show success since it's in your DB
+      }
+    } catch (error) {
+      console.error("Network error: ", error);
       setSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setSuccess(false), 5000);
-    } else {
-      alert("Error sending message: " + error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -41,7 +69,6 @@ export default function SubmitForm() {
     <section id="contact" className="Wrapper lg:px-0 px-4 py-24 bg-black">
       <div className="flex flex-col lg:flex-row gap-20">
         
-        {/* Left Side: Contact Information */}
         <div className="lg:w-1/2">
           <h2 className="font-glinter text-[50px] lg:text-[75px] text-[#D0B8AC] leading-tight mb-8">
             Let's Create <br /> Something Great
@@ -53,14 +80,13 @@ export default function SubmitForm() {
           <div className="space-y-4">
             <p className="text-[#D0B8AC] font-open uppercase tracking-widest text-sm">Follow Me</p>
             <div className="flex gap-6">
-               <a href="#" className="opacity-60 hover:opacity-100 transition-opacity">Instagram</a>
-               <a href="#" className="opacity-60 hover:opacity-100 transition-opacity">Facebook</a>
+               <a href="https://www.instagram.com/Shollystarphotography" target="_blank" rel="noreferrer" className="opacity-60 hover:opacity-100 transition-opacity">Instagram</a>
+               <a href="https://facebook.com/odusola.adewale" target="_blank" rel="noreferrer" className="opacity-60 hover:opacity-100 transition-opacity">Facebook</a>
             </div>
           </div>
         </div>
 
-        {/* Right Side: The Form */}
-        <div className="lg:w-1/2 ">
+        <div className="lg:w-1/2">
           <form onSubmit={handleSubmit} className="space-y-10">
             <div className="relative border-b border-white/20 focus-within:border-[#D0B8AC] transition-colors">
               <input 
@@ -109,7 +135,6 @@ export default function SubmitForm() {
             </button> 
           </form>
         </div>
-
       </div>
     </section>
   );
