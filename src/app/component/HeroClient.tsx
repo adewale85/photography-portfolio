@@ -46,10 +46,10 @@ function HeroClient({ heroData }: { heroData: any[] }) {
         <div className="absolute bottom-10 lg:left-170 lg:top-50 top-120 left-10 z-20 flex lg:flex-col flex-row items-center gap-6 justify-center">
           <div className="flex flex-row lg:flex-col gap-6 items-center">
             <div className="lg:w-[2px] w-20 lg:h-60 h-[2px] bg-[#D0B8AC] opacity-50" />
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/Shollystarphotography" target="_blank" rel="noreferrer">
               <Image src="/images/instagram.svg" alt="Instagram" width={20} height={20} />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/Odusola.Adewale" target="_blank" rel="noreferrer">
               <Image src="/images/facebook.svg" alt="Facebook" width={20} height={20} />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noreferrer">

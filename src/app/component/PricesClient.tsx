@@ -12,7 +12,7 @@ export default function PricesClient({ pricingData }: { pricingData: any[] }) {
           <Image
             src="/images/Priceimage.svg"
             alt="price-image"
-            width={500}
+            width={700}
             height={800}
             className="w-[500px] hover:scale-110 h-auto object-cover cursor-zoom-out transition-transform duration-500"
           />
@@ -20,14 +20,14 @@ export default function PricesClient({ pricingData }: { pricingData: any[] }) {
 
         {/* Right Pricing Section */}
         <div className="lg:w-[80%] w-full  ">
-          <h1 className='font-glinster font-normal lg:text-[75px] text-[50px] text-[#D0B8AC] pb-12'>
+          <h1 className='font-glinster font-normal lg:text-[55px] text-[50px] text-[#D0B8AC] pb-12'>
             My Prices
           </h1>
 
           <div className='flex gap-12'>
-            <div className='space-y-12 flex-1'>
+            <div className='space-y-6 flex-1'>
               {pricingData.map((item) => (
-                <div key={item.id} className='lg:w-[557px] w-full space-y-5'>
+                <div key={item.id} className='lg:w-[557px] w-full space-y-3'>
                   <div className='flex items-center justify-between'>
                     <h3 className='font-open font-normal text-[25px] border-b text-white'>
                       {item.category}
@@ -36,7 +36,7 @@ export default function PricesClient({ pricingData }: { pricingData: any[] }) {
                       {item.price}
                     </span>
                   </div>
-                  <p className='font-open font-normal text-17px text-white lg:w-[400px] w-full'>
+                  <p className='font-open font-normal text-17px text-white lg:w-[450px] w-full'>
                     {item.description}
                   </p>
                 </div>
