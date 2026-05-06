@@ -56,33 +56,33 @@ if (error) return <div className="p-10 text-red">Error: {error.message}</div>
 
         {/* Mobile */}
          <div className="space-y-12 lg:hidden w-full">
-              <Image
+              {/* <Image
                 src="/images/portrait2.svg"
                 alt="portrait2"
                 width={383}
                 height={376}
                 unoptimized
-              />
-              <p className="w-full text-white font-normal font-open text-[16px] leading-7">
+              /> */}
+              {/* <p className="w-full text-white font-normal font-open text-[16px] leading-7">
                 {profile[0].bio_text}
-              </p>
+              </p> */}
               <div className="mt-8 h-[2px] w-full  bg-[#D0B8AC] opacity-50" />
                 
             <div>
                 <h1 className="font-glinter font-bold lg:text-[40px] text-[50px] text-[#D0B8AC]">
             {profile[0].headline}
-              <p className="pl-6">Photographer </p>
+              {/* <p className="pl-6">Photographer </p> */}
             </h1>
             </div>
 
-            <div>
+            {/* <div>
             <Image
             src="/images/portrait3.svg"
             alt="portrait2"
             width={383}
             height={676}
           />
-          </div>
+          </div> */}
             </div>
        
     </main>

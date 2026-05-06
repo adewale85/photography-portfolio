@@ -39,7 +39,7 @@ export default function LatestWorkClient({ latestwork }: { latestwork: any[] }) 
           // Use the whileHover property directly
           whileHover={{ animationPlayState: "paused" }}
           transition={{
-            duration: 25,
+            duration: 10,
             ease: "linear",
             repeat: Infinity,
           }}

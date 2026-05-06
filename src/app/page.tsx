@@ -4,13 +4,13 @@
 import Navbar from './component/Navbar/Navbar'
 import HeroSection from './component/HeroSection'
 import About from './component/About'
-import Porfolio from './component/Portfolio'
 import LatestWork from './component/LatestWork'
 import Review from './component/Review'
-
 import Footer from './component/Footer/Footer'
 import Prices from './component/Prices'
 import Contact from './component/Contact'
+import Portfolio from './component/Portfolio'
+
 
 function Home() {
   return (
@@ -25,7 +25,7 @@ function Home() {
         </div>
         <About />
         <div>
-          <Porfolio />
+          <Portfolio />
           <LatestWork />
           <Prices />
           <Review />
