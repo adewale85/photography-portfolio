@@ -9,15 +9,15 @@ export default function LatestWorkClient({ latestwork }: { latestwork: any[] }) 
   const loopedWork = latestwork ? [...latestwork, ...latestwork] : [];
 
   return (
-    <main className="w-full overflow-hidden bg-black lg:py-20 py-12">
+    <main className="w-full Wrapper overflow-hidden bg-black lg:py-20 py-12">
 
       {/* Test animation (you can remove later) */}
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
         style={{
-          width: 50,
-          height: 50,
+          width: 30,
+          height: 30,
           
           backgroundColor: "red",
           margin: "20px",
@@ -26,7 +26,7 @@ export default function LatestWorkClient({ latestwork }: { latestwork: any[] }) 
       />
 
       {/* Slider Container */}
-      <div className="relative w-full overflow-hidden">
+      <div className="relative Wrapper w-full overflow-hidden">
 
           <motion.div
           className="flex w-max gap-6"

@@ -64,17 +64,13 @@ if (error) return <div className="p-10 text-red">Error: {error.message}</div>
                 unoptimized
               />
               <p className="w-full text-white font-normal font-open text-[16px] leading-7">
-                As a professional photographer, I aim to capture the essence and
-                beauty of the world around me through the lens of my camera.
-                With a keen eye for detail, I am able to create stunning images
-                that showcase the unique stories and personalities of my
-                clients.
+                {profile[0].bio_text}
               </p>
               <div className="mt-8 h-[2px] w-full  bg-[#D0B8AC] opacity-50" />
                 
             <div>
                 <h1 className="font-glinter font-bold lg:text-[40px] text-[50px] text-[#D0B8AC]">
-            Sholly Star
+            {profile[0].headline}
               <p className="pl-6">Photographer </p>
             </h1>
             </div>

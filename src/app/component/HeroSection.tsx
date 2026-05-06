@@ -10,5 +10,5 @@ export default async function HeroSection() {
   if (error) return <div className="p-10 text-red-500">Error: {error.message}</div>;
 
   // Pass the data to the interactive Client Component
-  return <HeroClient heroData={heroData || []} />;
+  return <HeroClient heroinfo={heroData || []} />;
 }

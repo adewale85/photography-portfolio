@@ -46,9 +46,6 @@ async function Porfolio() {
       </div>
 
 
-
-
-
    <div className='space-y-5'>
      <p className='lg:w-[502px] w-full text-white text-[16px] font-normal font-open'>Thought years of experience, I have honed my skills in composition, lighting, and post-production to produce stunning visuals that showcase the beauty of my subjects. Whether it's a portrait, landscape, or event, I approach each project with passion and dedication, striving to deliver images that exceed my clients' expectations. </p>
     <div className='relative z-10 w-full'>

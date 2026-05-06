@@ -11,6 +11,6 @@ export default async function LatestWork() {
 
   if (error) return <div className="text-red-500">Error: {error.message}</div>;
 
-  // Pass the data to the Client Component
+ 
   return <LatestWorkClient latestwork={latestwork || []} />;
 }

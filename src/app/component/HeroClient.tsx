@@ -2,18 +2,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 
-function HeroClient({ heroData }: { heroData: any[] }) {
+function HeroClient({ heroinfo }: { heroinfo: any[] }) {
   return (
    <section className="Wrapper relative min-h-screen w-full bg-black flex flex-col-reverse lg:flex-row lg:gap-22 gap-0 lg:mb-22 mb-0 overflow-hidden">
       
       {/* Content Area */}
       <div className="flex flex-col justify-center px-6 py-12 lg:px-0 lg:w-[50%] z-10 ">
         <h1 className="font-glinter text-[50px] md:text-[70px] lg:text-[120px] leading-[0.85] text-[#D0B8AC] mb-6">
-          {heroData[0]?.headline}
+          {heroinfo[0]?.headline}
         </h1>
 
         <p className="max-w-md text-[17px] lg:text-[16px] text-gray-300 mb-10 leading-8">
-          {heroData[0]?.subheadline}
+          {heroinfo[0]?.subheadline}
         </p>
 
         <Link href="/about" className="flex items-center gap-4 group">
@@ -28,7 +28,7 @@ function HeroClient({ heroData }: { heroData: any[] }) {
 
       {/* Image Gallery Area */}
       <div className="relative w-full h-[90vh] lg:h-[90vh] py-22 lg:w-[50%]">
-        {heroData?.map((content) => (
+        {heroinfo?.map((content) => (
           <div key={content.id} className="relative w-full h-full">
              <Image
               src={content.image_url}
