@@ -25,19 +25,17 @@ export default async function Review() {
                 src={review.image_url}
                 alt={review.name}
                 unoptimized
-                width={400} height={500}
                 fill
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                className="w-full h-10 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
               />
               
               
               <div className="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/80 to-transparent">
                 <h4 className="text-white font-bold text-xl">{review.name}</h4>
                 <p className="text-zinc-400 text-sm">{review.category}</p>
+                <p className="text-zinc-300">{review.reviewtext}</p>
               </div>
             </div>
-            
-            {/* Optional: Review Text display on hover or below */}
             
           </div>
         ))}
