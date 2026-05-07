@@ -2,7 +2,7 @@ import { supabase } from "@/utils/superbase";
 import Image from "next/image";
 
 export default async function Review() {
-  // Fetch data on the server
+  
   const { data: Reviews, error } = await supabase
     .from('Reviews')
     .select('*');
@@ -18,7 +18,8 @@ export default async function Review() {
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
         {Reviews?.map((review) => (
           <div key={review.id} className="relative group overflow-hidden rounded-sm">
-            {/* Review Image */}
+
+            
             <div className="relative aspect-[4/5] w-full">
               <Image
                 src={review.image_url}
@@ -29,7 +30,7 @@ export default async function Review() {
                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
               />
               
-              {/* Text Overlay on Image */}
+              
               <div className="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/80 to-transparent">
                 <h4 className="text-white font-bold text-xl">{review.name}</h4>
                 <p className="text-zinc-400 text-sm">{review.category}</p>
