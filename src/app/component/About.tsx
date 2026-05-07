@@ -10,12 +10,12 @@ export default async function About() {
   if (!profile || profile.length === 0) return null;
 
   return (
-    <main id="about" className="Wrapper lg:px-0 px-4 my-15 lg:my-0">
+    <main id="about" className="Wrapper lg:px-0 px-4 my-15 lg:my-0 ">
       
-      {/* DESKTOP VIEW - Restored to your original layout logic */}
+    
       <div className="hidden lg:flex relative items-center justify-end min-h-[800px]">
         
-        {/* This is your Left & Middle Content (Positioned Absolute to overlap) */}
+      
         <div className="absolute left-0 z-20 w-full">
           <div className="flex items-center gap-30">
             <div>
@@ -47,7 +47,7 @@ export default async function About() {
           </div>
         </div>
 
-        {/* This is your Right Background-style Image */}
+        {/* My Right Image */}
         <div className="relative z-10 mt-60">
           <Image
             alt={profile[0].title}
@@ -59,7 +59,7 @@ export default async function About() {
         </div>
       </div>
 
-      {/* MOBILE VIEW - Simplified stacking for phones */}
+      {/* MOBILE VIEW */}
       <div className="lg:hidden flex flex-col space-y-20 pt-10">
         <Image
           src={profile[0].image_url}
@@ -70,7 +70,7 @@ export default async function About() {
           className="w-full h-auto object-cover grayscale"
         />
         
-        <div className="space-y-6 mb-6">
+        <div className="space-y-12 py-12">
   <h1 className="font-glinter font-normal text-[50px] leading-tight text-[#D0B8AC]">
             Photographer <br />
             {profile[0].headline}

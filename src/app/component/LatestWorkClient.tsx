@@ -11,8 +11,8 @@ export default function LatestWorkClient({ latestwork }: { latestwork: any[] }) 
   const [ispaused, setIsPaused] = useState(false);
 
   return (
-    <main className="w-full Wrapper overflow-hidden bg-black lg:py-20 py-12">
-
+    <main className="w-full Wrapper overflow-hidden bg-black lg:py-20 py-8">
+      <h1 className="font-glinster leading-12 font-normal lg:text-[55px] text-5xl text-[#D0B8AC] py-8">My Latest Work</h1>
       {/* Test animation (you can remove later) */}
       <motion.div 
         animate={{ rotate: 360 }}
@@ -22,7 +22,7 @@ export default function LatestWorkClient({ latestwork }: { latestwork: any[] }) 
           width: 30,
           height: 30,
           backgroundColor: "red",
-          margin: "20px",
+          margin: "10px",
           
         }}
       />

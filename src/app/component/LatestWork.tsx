@@ -2,7 +2,6 @@ import { supabase } from "@/utils/superbase";
 import LatestWorkClient from "./LatestWorkClient";
 
 export default async function LatestWork() {
-  // Fetch data on the server
   
   const { data: latestwork, error } = await supabase
     .from('latestwork') // Double check your table name spelling!

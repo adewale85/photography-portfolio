@@ -1,14 +1,15 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function PricesClient({ pricingData }: { pricingData: any[] }) {
   return (
-    <main id="prices" className="Wrapper scroll-mb-150 lg:px-0 px-10 lg:py-32 py-12 bg-black">
-      <div className='flex lg:flex-row flex-col items-center gap-8 lg:gap-12'>
+    <main id="prices" className="Wrapper scroll-mb-150 lg:px-0 px-4 lg:py-32 py-12 bg-black">
+      <div className='flex lg:flex-row flex-col items-center justify-center gap-8 lg:gap-12'>
         
-        {/* Left Image Section */}
-        <div className='mb-15 lg:mb-0'>
+    
+        <div className='mb-5 lg:mb-0'>
           <Image
             src="/images/Priceimage.svg"
             alt="price-image"
@@ -18,9 +19,8 @@ export default function PricesClient({ pricingData }: { pricingData: any[] }) {
           />
         </div>
 
-        {/* Right Pricing Section */}
         <div className="lg:w-[80%] w-full  ">
-          <h1 className='font-glinster font-normal lg:text-[55px] text-[50px] text-[#D0B8AC] pb-12'>
+          <h1 className='font-glinster font-normal lg:text-[55px] text-[50px] text-[#D0B8AC] lg:pb-16 pb-12 '>
             My Prices
           </h1>
 
@@ -43,11 +43,11 @@ export default function PricesClient({ pricingData }: { pricingData: any[] }) {
               ))}
             </div>
 
-            {/* Decorative Vertical Line */}
+      
             <div className='hidden lg:flex flex-col items-center justify-center h-[450px] w-[2px] bg-white opacity-60'></div>
           </div>
 
-          {/* CTA Footer */}
+        <Link href="#contact" className='flex items-center justify-end gap-3'>
           <div className='flex gap-3 items-end justify-end py-8 cursor-pointer group'>
             <p className='font-open font-normal text-[17px] text-white'>Book Now</p>
             <div className="transition-transform duration-300 group-hover:translate-x-2">
@@ -60,6 +60,8 @@ export default function PricesClient({ pricingData }: { pricingData: any[] }) {
               />
             </div>
           </div>
+        </Link>
+
         </div>
       </div>
     </main>

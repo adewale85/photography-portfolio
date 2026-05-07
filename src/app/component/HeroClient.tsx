@@ -16,7 +16,7 @@ function HeroClient({ heroinfo }: { heroinfo: any[] }) {
           {heroinfo[0]?.subheadline}
         </p>
 
-        <Link href="/about" className="flex items-center gap-4 group">
+        <Link href="#about" className="flex items-center gap-4 group">
           <span className="text-[#D0B8AC] group-hover:underline">
             Read More
           </span>
@@ -27,7 +27,7 @@ function HeroClient({ heroinfo }: { heroinfo: any[] }) {
       </div>
 
       {/* Image Gallery Area */}
-      <div className="relative w-full h-[90vh] lg:h-[90vh] py-22 lg:w-[50%]">
+      <div className="relative w-full h-[90vh] lg:h-[80vh] py-22 lg:w-[50%]">
         {heroinfo?.map((content) => (
           <div key={content.id} className="relative w-full h-full">
              <Image

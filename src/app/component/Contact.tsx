@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { supabase } from "@/utils/superbase";
 import Image from "next/image";
 
-export default function SubmitForm() {
+export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState({
@@ -17,7 +17,7 @@ export default function SubmitForm() {
     e.preventDefault();
     setLoading(true);
 
-    // 1. Save to Supabase (Database)
+    
     const { error: superbaseError } = await supabase
       .from("Contact")
       .insert([
@@ -28,7 +28,7 @@ export default function SubmitForm() {
         }
       ]);
 
-    // Only stop if there IS an error
+   
     if (superbaseError) {
       setLoading(false);
       alert("Error saving to database: " + superbaseError.message);
@@ -55,7 +55,7 @@ export default function SubmitForm() {
         setTimeout(() => setSuccess(false), 5000);
       } else {
         console.error("Email failed, but data saved in Supabase.");
-        setSuccess(true); // Still show success since it's in your DB
+        setSuccess(true); 
       }
     } catch (error) {
       console.error("Network error: ", error);

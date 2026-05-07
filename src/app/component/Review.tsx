@@ -12,7 +12,7 @@ export default async function Review() {
   return <div className="text-zinc-500 p-10">Waiting for reviews to be uploaded...</div>;
 }
     return (
-      <section className="bg-black py-20 px-4">
+      <section className="Wrapper bg-black py-20 px-4">
       <h2 className="text-white text-7xl font-glinter mb-12">Reviews</h2>
       
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
@@ -38,9 +38,7 @@ export default async function Review() {
             </div>
             
             {/* Optional: Review Text display on hover or below */}
-            <div className="mt-4">
-               <p className="text-zinc-500 italic text-sm">"{review.reviewtext}"</p>
-            </div>
+            
           </div>
         ))}
       </div>
