@@ -3,22 +3,24 @@
 import React, { useState } from "react";
 import { supabase } from "@/utils/superbase";
 import Image from "next/image";
+import useSendMessage from "@/hooks/useSendMessage";
 
 export default function Contact() {
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
+  // Logic: Extract status variables from our custom hook
+  const { mutate, isPending, isSuccess } = useSendMessage();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
 
-    
-    const { error: superbaseError } = await supabase
+    // 1. Logic: Save to Supabase first (Database Record)
+    // We still do this here because it's a direct DB interaction
+    const { error: supabaseError } = await supabase
       .from("Contact")
       .insert([
         { 
@@ -28,41 +30,22 @@ export default function Contact() {
         }
       ]);
 
-   
-    if (superbaseError) {
-      setLoading(false);
-      alert("Error saving to database: " + superbaseError.message);
+    if (supabaseError) {
+      alert("Error saving to database: " + supabaseError.message);
       return;
     }
 
-    // 2. Send to Gmail via our API route
-    try {
-      const emailResponse = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        })
-      });
-
-      if (emailResponse.ok) {
-        setSuccess(true);
+    // 2. Logic: Trigger the TanStack Mutation (Email Delivery)
+    // This calls your Axios instance and Resend API
+    mutate(formData, {
+      onSuccess: () => {
+        // Clear the form only if the email also succeeds
         setFormData({ name: "", email: "", message: "" });
-        setTimeout(() => setSuccess(false), 5000);
-      } else {
-        console.error("Email failed, but data saved in Supabase.");
-        setSuccess(true); 
+      },
+      onError: (error) => {
+        console.error("Database saved, but email failed:", error);
       }
-    } catch (error) {
-      console.error("Network error: ", error);
-      setSuccess(true);
-    } finally {
-      setLoading(false);
-    }
+    });
   };
 
   return (
@@ -123,11 +106,12 @@ export default function Contact() {
 
             <button 
               type="submit" 
-              disabled={loading}
+              disabled={isPending} // Logic: Auto-disables while Axios is working
               className="flex items-center gap-4 group cursor-pointer disabled:opacity-50"
             >
               <span className="text-[#D0B8AC] uppercase tracking-[0.3em] text-xs font-bold group-hover:underline">
-                {loading ? "Sending..." : success ? "Message Sent!" : "Send Message"}
+                {/* Logic: UI reacts to the mutation state */}
+                {isPending ? "Sending..." : isSuccess ? "Message Sent!" : "Send Message"}
               </span>
               <div className="transition-transform duration-300 group-hover:translate-x-2">
                 <Image src="/images/Right_Arrow.svg" alt="Arrow" width={24} height={12} />

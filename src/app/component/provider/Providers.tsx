@@ -1,4 +1,4 @@
-'use client' // This is the most important line!
+'use client' 
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useState } from 'react'

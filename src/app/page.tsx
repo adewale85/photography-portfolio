@@ -12,6 +12,7 @@ import Contact from './component/Contact'
 import Portfolio from './component/Portfolio'
 
 
+
 function Home() {
   return (
     <div>
@@ -20,7 +21,6 @@ function Home() {
       <div className='lg:mt-12 mt-2'>
         <Navbar />
         <div>
-          {/* This now works because the parent is a Server Component */}
           <HeroSection/>
         </div>
         <About />
@@ -32,6 +32,7 @@ function Home() {
           {/* <SubmitForm /> */}
           <Contact/>
           <Footer />
+          
         </div>
       </div>
     </main>

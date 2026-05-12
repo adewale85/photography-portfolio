@@ -10,7 +10,7 @@ export default async function About() {
   if (!profile || profile.length === 0) return null;
 
   return (
-    <main id="about" className="Wrapper lg:px-0 px-4 my-15 lg:my-0 ">
+    <main id="about" className="Wrapper lg:px-0 px-4 my-15  ">
       
     
       <div className="hidden lg:flex relative items-center justify-end min-h-[800px]">

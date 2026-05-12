@@ -1,87 +1,101 @@
+
 import { supabase } from "@/utils/superbase";
-import Link from "next/dist/client/link";
 import Image from "next/image";
 
+import Link from "next/link";
+
 export default async function Portfolio() {
-    const { data: portfolio, error } = await supabase
-      .from('portfolio')
-      .select('*')
+  // 1. Logic: Direct Server-side fetch (No useEffect needed)
+  const { data: portfolio, error } = await supabase
+    .from("portfolio")
+    .select("*")
+    .limit(4);
 
-    if (error) return <div className="p-10 text-red-500">Error: {error.message}</div>
+    console.log (portfolio)
 
-    // Directly assigning rows from your Supabase table
-    const firstImage = portfolio?.[0];  
-    const secondImage = portfolio?.[1]; 
-    const overlapImage = portfolio?.[2]; 
+  if (error) return <div className="p-10 text-red-500 text-center">Error: {error.message}</div>;
+  if (!portfolio || portfolio.length === 0) return null;
 
   return (
-    <main id="portfolio" className='Wrapper lg:scroll-mt-20 scroll-mt-12 lg:py-40 py-12 space-y-12 lg:px-0 px-4 items-center justify-center '>
-      <h3 className='text-white font-glinter font-medium text-7xl '>Portfolio</h3>
+    <section id="portfolio" className="Wrapper bg-black text-white  ">
       
-      <div className='flex lg:flex-row flex-col justify-between lg:gap-22 gap-42'>
+        <h2 className="text-7xl font-glinter  py-22  text-white">Portfolio</h2>
         
-        {/*FIRST IMAGE */}
-        <div className="w-full h-[400px] mb-12 lg:mb-0">
-          <div className="lg:w-[602px] w-full h-[2px] text-[#D0B8AC] bg-[#D0B8AC] opacity-50">
-            {firstImage && (
-              <div key={firstImage.id} className="group relative overflow-hidden bg-zinc-900 rounded-sm">
-                 <Image 
-                  src={firstImage.image_url} 
-                  alt={firstImage.title} 
-                  unoptimized
-                  className=" object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out"
-                  width={553} height={190.73}
-                />
-              </div>
-            )}
-          </div>
-        </div>
-
-       {/* SECOND IMAGE  */}
-        <div className='space-y-5'>
-          {secondImage && (
-            <div className='w-full text-white font-normal font-open text-[16px] leading-7'>
-              <p className='lg:w-[502px] w-full text-white text-[16px] font-normal font-open'>
-                {secondImage.description}
-              </p>
-
-              <div className='relative z-10 w-full flex items-center justify-center'>
-               
-                <Image
-                  src={secondImage.image_url}
-                  alt={secondImage.title}
-                  width={553}
-                  height={190.73}
-                />
-
-                {/* THE OVERLAP IMAGE */}
-                {overlapImage && (
-                  <div className='absolute z-40 -bottom-12 -left-12 border-4 border-black'>
-                    <Image 
-                      src={overlapImage.image_url} 
-                      alt={overlapImage.title} 
-                      width={276} 
-                      height={294}
-                      className="object-cover h-[294px]"
-                    />
-                  </div>
-                )}
-              </div>
+        {/* <div className="flex flex-col lg:flex-row gap-10">
+          {portfolio.map((photo)=>(
+            <div key={photo.id} className=" ">
+              <Image
+               src={photo[0].image_url}
+               alt="Featured Portfolio"
+               width={555}
+               height={444}
+               unoptimized
+               className="object-cover"
+              />
             </div>
-          )}
-        </div>
-      </div>
+          ))}
+        </div> */}
 
-    
-       <Link href="/My gallery" className='flex items-center justify-end gap-3'>
-        <p className='flex lg:items-center gap-3 font-open font-normal text-[16px] text-[#D0B8AC] items-end justify-end lg:py-0 py-3'>
-          See All Portfolio
-          <span className=''>
-            <Image src="/images/Right_Arrow.svg" alt="Arrow" width={24} height={12} className="w-auto" />
-          </span>
-        </p>
-        </Link>
+
+  <div className="flex flex-col lg:flex-row items-center justify-between my-20">
+  {/* IMAGE 1: The Left Portrait */}
+  <div>
+    {portfolio[0] && (
+      <div className="w-full lg:w-[500px]">
+        <Image
+          src={portfolio[0].image_url}
+          alt="main shot"
+          width={500}
+          height={600}
+          unoptimized
+          className="object-cover"
+        />
+      </div>
+    )}
+  </div>
+
+  {/* RIGHT GROUP: Contains Image 2 and the Overlapping Image 3 */}
+  <div className="relative"> 
+    {/* IMAGE 2: The Base Image */}
+    {portfolio[1] && (
+      <div className="w-full lg:w-[500px]">
+        <Image
+          src={portfolio[1].image_url}
+          alt="base shot"
+          width={500}
+          height={600}
+          unoptimized
+          className="object-cover"
+        />
+      </div>
+    )}
+
+    {/* IMAGE 3: The Overlapping Image */}
+    {portfolio[3] && ( 
+      <div className="absolute  w-[250px] lg:w-[300px]  border-8 border-black z-30 shadow-2xl">
+        <Image
+          src={portfolio[2].image_url}
+          alt="overlap shot"
+          fill // Logic: fill makes it expand to the parent's width/height exactly
+          unoptimized
+          className="w-12 h-8"
+        />
+      </div>
+    )}
+  </div>
+</div>
+        
       
-    </main>
+        <div className="flex justify-end py-12">
+          <Link 
+            href="/portfolio" 
+            className="flex items-center gap-2 text-white hover:text-[#D0B8AC] transition-colors"
+          >
+            <span className="text-sm tracking-[0.2em] uppercase">See All Portfolio</span>
+            <Image src="/images/Right_Arrow.svg" alt="Arrow" width={20} height={10} />
+          </Link>
+        </div>
+      
+    </section>
   );
 }
