@@ -11,12 +11,12 @@ export default async function PortfolioGallery() {
     .order('created_at', { ascending: false });
 
   if (error) return <div className="p-20 text-red-500">Error loading portfolio: {error.message}</div>;
-  const categories = ["Wedding", "Birthday", "Studio","Portrait"];
+  const categories = ["Wedding", "Birthday", "Studio","Portrait","Outdoor"];
 
   return (
     <main className="Wrapper bg-black min-h-screen text-white px-4 lg:px-0 py-12">
       
-
+      
       {categories.map((cat)=>{
         const photos = gallery?.filter(p=> p.category.toLowerCase() === cat.toLowerCase());
       
@@ -31,7 +31,7 @@ export default async function PortfolioGallery() {
   </div>
 
   {/* THE GRID: This controls how many images appear per row */}
-<div className="flex lg:flex-row flex-col gap-8">
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
   {photos.map((photo) => (
     
     <div key={photo.id} className="relative h-[450px] w-full group overflow-hidden bg-zinc-900">
