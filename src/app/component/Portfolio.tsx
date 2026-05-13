@@ -88,7 +88,7 @@ export default async function Portfolio() {
       
         <div className="flex justify-end py-12">
           <Link 
-            href="/portfolio" 
+            href="/porfolioGalary" 
             className="flex items-center gap-2 text-white hover:text-[#D0B8AC] transition-colors"
           >
             <span className="text-sm tracking-[0.2em] uppercase">See All Portfolio</span>

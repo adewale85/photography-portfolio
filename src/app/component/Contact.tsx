@@ -12,14 +12,13 @@ export default function Contact() {
     message: "",
   });
 
-  // Logic: Extract status variables from our custom hook
+
   const { mutate, isPending, isSuccess } = useSendMessage();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // 1. Logic: Save to Supabase first (Database Record)
-    // We still do this here because it's a direct DB interaction
+   
     const { error: supabaseError } = await supabase
       .from("Contact")
       .insert([
