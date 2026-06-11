@@ -108,7 +108,7 @@ export default function Contact() {
               disabled={isPending} // Logic: Auto-disables while Axios is working
               className="flex items-center gap-4 group cursor-pointer disabled:opacity-50"
             >
-              <span className="text-[#D0B8AC] uppercase tracking-[0.3em] text-xs font-bold group-hover:underline">
+              <span className="text-[#D0B8AC] uppercase tracking-[0.3em] text-xs font-bold group-hover:underline bg-[#D0B8AC] text-black w-full h-8 py-12 px-22 rounded">
                 {/* Logic: UI reacts to the mutation state */}
                 {isPending ? "Sending..." : isSuccess ? "Message Sent!" : "Send Message"}
               </span>
