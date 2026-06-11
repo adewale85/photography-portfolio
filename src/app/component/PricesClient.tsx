@@ -8,7 +8,6 @@ export default function PricesClient({ pricingData }: { pricingData: any[] }) {
     <main id="prices" className="Wrapper scroll-mb-150 lg:px-0 px-4 lg:py-32 py-12 bg-black">
       <div className='flex lg:flex-row flex-col items-center justify-center gap-8 lg:gap-12'>
         
-    
         <div className='mb-5 lg:mb-0'>
           <Image
             src="/images/Priceimage.svg"
@@ -19,8 +18,8 @@ export default function PricesClient({ pricingData }: { pricingData: any[] }) {
           />
         </div>
 
-        <div className="lg:w-[80%] w-full  ">
-          <h1 className='font-glinster font-normal lg:text-[55px] text-[50px] text-[#D0B8AC] lg:pb-16 pb-12 '>
+        <div className="lg:w-[80%] w-full">
+          <h1 className='font-glinster font-normal lg:text-[55px] text-[50px] text-[#D0B8AC] lg:pb-16 pb-12'>
             My Prices
           </h1>
 
@@ -43,24 +42,27 @@ export default function PricesClient({ pricingData }: { pricingData: any[] }) {
               ))}
             </div>
 
-      
             <div className='hidden lg:flex flex-col items-center justify-center h-[450px] w-[2px] bg-white opacity-60'></div>
           </div>
 
-        <Link href="#contact" className='flex items-center justify-end gap-3'>
-          <div className='flex gap-3 items-end justify-end py-8 cursor-pointer group'>
-            <p className='font-open font-normal text-[17px] text-white'>Book Now</p>
-            <div className="transition-transform duration-300 group-hover:translate-x-2">
-              <Image
-                src="/images/right-arrow1.svg"
-                alt="Arrow"
-                width={24}
-                height={12}
-                className="w-auto"
-              />
-            </div>
+          {/* UPGRADED: Full-width on mobile, auto-width and right-aligned on desktop */}
+          <div className='flex justify-end pt-12 w-full'>
+            <Link 
+              href="#contact" 
+              className='group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#D0B8AC] px-22 py-4 font-open text-[16px] font-bold uppercase tracking-widest text-black shadow-lg transition-all duration-300 hover:bg-white hover:scale-105 active:scale-95 animate-pulse hover:animate-none w-full lg:w-auto text-center'
+            >
+              <span>Book Now</span>
+              <div className="transition-transform duration-300 ease-out group-hover:translate-x-2 hidden lg:block">
+                <Image
+                  src="/images/right-arrow1.svg"
+                  alt="Arrow"
+                  width={24}
+                  height={12}
+                  className="w-auto invert"
+                />
+              </div>
+            </Link>
           </div>
-        </Link>
 
         </div>
       </div>

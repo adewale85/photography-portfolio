@@ -5,12 +5,11 @@ import Navbar from './component/Navbar/Navbar'
 import HeroSection from './component/HeroSection'
 import About from './component/About'
 import LatestWork from './component/LatestWork'
-import Review from './component/Review'
 import Footer from './component/Footer/Footer'
 import Prices from './component/Prices'
 import Contact from './component/Contact'
 import Portfolio from './component/Portfolio'
-
+import ReviewServer from './component/ReviewServer'
 
 
 function Home() {
@@ -18,7 +17,7 @@ function Home() {
     <div>
        <main className='flex min-h-screen flex-col bg-[#000000] 
        bg-cover bg-center bg-fixed bg-no-repeat w-full '>
-      <div className='lg:mt-12 mt-2'>
+      <div className=''>
         <Navbar />
         <div>
           <HeroSection/>
@@ -28,8 +27,7 @@ function Home() {
           <Portfolio />
           <LatestWork />
           <Prices />
-          <Review />
-          {/* <SubmitForm /> */}
+          <ReviewServer />
           <Contact/>
           <Footer />
           
