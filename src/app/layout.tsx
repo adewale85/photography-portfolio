@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Roboto, Open_Sans } from "next/font/google";
+import { Open_Sans, Roboto } from "next/font/google";
 import "./globals.css";
 import Providers from "./component/provider/Providers";
-
-
 
 
 const openSans = Open_Sans({
@@ -12,10 +10,10 @@ const openSans = Open_Sans({
 });
 
 const roboto = Roboto({
-  weight: ["400", "500", "700"],
   subsets: ["latin"],
   variable: "--font-roboto",
 });
+
 
 export const metadata: Metadata = {
   title: "My Photography Portfolio",

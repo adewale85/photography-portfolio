@@ -18,9 +18,9 @@ export default function Navbar() {
     ]
 
   return (
-    <main className=' relative flex items-center w-full h-16 lg:px-0 px-4 Wrapper'>
+    <main className=' relative flex w-full h-16 lg:px-0 px-4 Wrapper'>
        
-        <ul className=' lg:flex hidden gap-22 text-white font'>
+        <ul className=' Wrapper lg:flex hidden gap-22 text-white font fixed top-0 left-0 right-0 z-50 bg-[#000000] py-6 items-justify-between'>
             <h1 className='text-white'> PHOTOGRAPHY</h1>
           {Navlinks.map((link)=>(
             <li key={link.name}>

@@ -7,7 +7,7 @@ function HeroClient({ heroinfo }: { heroinfo: any[] }) {
  
 
   return (
-    <section className="Wrapper relative min-h-screen w-full bg-black flex flex-col-reverse lg:flex-row lg:items-center justify-center overflow-hidden">
+    <section className="Wrapper relative min-h-screen w-full bg-black flex flex-col-reverse lg:flex-row lg:items-center justify-center overflow-hidden mt-12">
       
       {/* Text Content Area - Left Side */}
       <div className="lg:px-0 px-4 relative flex flex-col justify-center py-16  w-full lg:w-[50%] z-10 min-h-[50vh] lg:-mt-12">
@@ -31,7 +31,7 @@ function HeroClient({ heroinfo }: { heroinfo: any[] }) {
         </h1>
 
         {/* Subheading */}
-        <p className="z-10 max-w-md text-[18px] text-gray-300 mb-10 leading-8">
+        <p className="z-10 max-w-md text-[18px] text-white text-gray-300 mb-10 leading-8 ">
           {heroinfo[0]?.subheadline}
         </p>
 

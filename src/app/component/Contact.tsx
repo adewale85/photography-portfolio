@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-export default function ContactForm() {
+export default function Contact() {
   // 1. Existing State Variables
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isPending, setIsPending] = useState(false);
@@ -31,7 +31,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="Wrapper relative w-full flex flex-col lg:flex-row gap-12">
+    <div id="contact" className="Wrapper relative w-full flex flex-col lg:flex-row gap-12 mt-12 ">
       
       {/* LEFT SIDE TEXT */}
       <div className="lg:w-1/2">

@@ -16,13 +16,10 @@ export default async function PortfolioGallery() {
   const categoryList = [ "Wedding","Birthday","Studio","Portrait", "Outdoor"]
 
   return (
-    <main className="Wrapper bg-black min-h-screen text-white px-4 lg:px-0 pt-32 pb-12">
+    <main className="bg-black min-h-screen text-white  pt-32 pb-12">
+      <div className="Wrapper px-4 lg:px-0">
          <div className="space-y-8 mt-12">
-           <div>
-            <Link href="/" className="text-[#D0B8AC] text-sm uppercase tracking-[0.3em] mb-4 block hover:opacity-70 transition-opacity">
-              ← Back to Home
-            </Link>
-          </div>
+          
           <div className="space-y-4">
             <h1 className="text-7xl font-glinter leading-none">Full Gallery</h1>
           <p className="text-zinc-500 max-w-md text-xl uppercase tracking-wider leading-relaxed">
@@ -31,7 +28,13 @@ export default async function PortfolioGallery() {
           </div>
          </div>
   <nav className="fixed left-0 top-0 z-50 w-full bg-white text-black py-6 shadow-2xl p-6">
-      <div className="Wrapper flex items-center justify-center gap-8 md:gap-16">
+
+      <div className="Wrapper flex items-center justify-between gap-8 md:gap-16">
+       
+            <Link href="/" className="text-black text-sm uppercase tracking-[0.3em] block hover:opacity-70 transition-opacity">
+              ← Back to Home
+            </Link>
+          
       {categoryList.map((list) => (
         <a 
           key={list} 
@@ -83,11 +86,7 @@ export default async function PortfolioGallery() {
 </section>
         )
       })}
-
-      
-
-     
-      
+</div>
     </main>
   );
 }
