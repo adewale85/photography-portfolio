@@ -15,7 +15,6 @@
     "axios": "^1.15.0",
     "cloudinary": "^2.10.0",
     "framer-motion": "^12.38.0",
-    "icon": "^0.0.3",
     "next": "16.2.1",
     "next-cloudinary": "^6.17.5",
     "react": "19.2.4",
